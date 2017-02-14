@@ -22,7 +22,6 @@ var counter = {
     return displayCount
   },
 
-
   addEventListeners: function(){
     counter.addButton.addEventListener('click', counter.addOne);
     counter.subtractButton.addEventListener('click', counter.subtractOne);
@@ -40,9 +39,12 @@ var counter = {
   },
 
   subtractOne: function() {
-    counter.count -= 1;
+    if (counter.count > 0){
+      counter.count -= 1;
+    }
+    // counter.count -= 1;
     counter.render();
-  },
+  }
 
 }
 
